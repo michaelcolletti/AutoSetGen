@@ -1,0 +1,56 @@
+name: Generate Setlist
+
+# Define the different music genres
+genres:
+  - jazz
+  - bebop
+  - jazz fusion
+  - philly soul
+
+# Define the API endpoint for getting average age by zip code
+#average_age_api_url: "https://api.example.com/average_age?zipcode={zipcode}"
+average_age_api_url: "https://api.census.gov/data/2020/dec/sf1/profile/P001?key={census_api_key}&zcta={zcta}"
+
+# Define the maximum number of songs per genre
+max_songs_per_genre: 3
+
+# Define the template for generating the setlist
+setlist_template:
+  - genre: {genre}
+    songs:
+      - {song_title}
+      - {song_title}
+      - {song_title}
+   
+
+# Define the script logic
+script:
+  # Get the user-provided zip code
+  zipcode: "{{ user_input('Enter zip code:') }}"
+#  zipcode: "12498"
+
+
+  # Get the average age for the zip code
+  average_age: "{{ api_request(average_age_api_url, {'zipcode': zipcode})['average_age'] }}"
+#printf "{average_age}"
+
+  # Calculate the target year based on the average age
+  target_year: "{{ 2024 - average_age  }}"
+
+  # Generate a list of top 40 hits for each genre in the target year
+  top_hits_by_genre:
+    {% for genre in genres %}
+      - genre: {{ genre }}
+        songs:
+          {% for i in range(max_songs_per_genre) %}
+            - "{{ gpt_search(f'top 40 {genre} hits of {target_year}')[i]['title'] }}"
+          {% endfor %}
+    {% endfor %}
+
+  # Generate the final setlist
+  setlist: "{{ setlist_template | fill(top_hits_by_genre) }}"
+
+# Output the generated setlist
+output:
+  text: "Here's your setlist:\n\n{{ setlist }}"
+
