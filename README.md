@@ -19,3 +19,14 @@
 brew install gptscript 
 git clone [https://github.com/gptscript-ai/gptscript
 cd gptscript
+gptscript ./announce.gpt
+```
+- Now git clone this repo 
+```
+git clone https://github.com/michaelcolletti/AutoSetGen
+cd AutoSetGen
+```
+- Edit the file to change the values or leave my defaults of jazz bebop jazz fusiona and  philly soul. 3 Songes will be selected 
+- Be sure to add your OpenAI API Key by either a env variable `export OPENAI_API_KEY=XXXXXXXXXXXXX` or set in your .env file.
+- Same applies to the Census Key easily obtained [here](https://api.census.gov/data/key_signup.html).
+- **Be sure to not commit any keys in your repo. A great way to handle this is to use Github or a vault for secrets.**
