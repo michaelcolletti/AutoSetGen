@@ -8,10 +8,9 @@
 ### Create the Code to Scaffold the WorkSpace 
 
 - GPTScript will be used to script complex tasks and make them repeatable 
-- Code will be in repo 
 
 
-### Use Case: Age, Zip Code the Generate a Setlist
+### Use Case: Age, Zip Code the Generate a Setlist 
 
 - Install [gptscript](https://github.com/gptscript-ai/gptscript) now. Visit [GPTScript.ai](https://gptscript.ai) .
 - Prereq: Git `brew install git` 
@@ -26,7 +25,8 @@ gptscript ./announce.gpt
 git clone https://github.com/michaelcolletti/AutoSetGen
 cd AutoSetGen
 ```
-- Edit the file to change the values or leave my defaults of jazz bebop jazz fusiona and  philly soul. 3 Songes will be selected 
+
+- Edit the file to change the values or leave my defaults of: jazz, bebop, jazz fusion, and  philly soul. 3 Songs will be selected. 
 - Be sure to add your OpenAI API Key by either a env variable `export OPENAI_API_KEY=XXXXXXXXXXXXX` or set in your .env file.
-- Same applies to the Census Key easily obtained [here](https://api.census.gov/data/key_signup.html).
-- **Be sure to not commit any keys in your repo. A great way to handle this is to use Github or a vault for secrets.**
+- The same applies to the Census Key easily obtained [here](https://api.census.gov/data/key_signup.html).
+- **Be sure to not commit any keys in your repo. A great way to handle this is to use Github secrets or a vault for secrets.** 
