@@ -2,7 +2,6 @@ name: Generate Setlist
 
 # Define the different music genres
 genres:
-  - jazz
   - bebop
   - jazz fusion
   - philly soul
