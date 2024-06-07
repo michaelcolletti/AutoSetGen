@@ -12,7 +12,7 @@ genres:
 average_age_api_url: "https://api.census.gov/data/2020/dec/sf1/profile/P001?key={census_api_key}&zcta={zcta}"
 
 # Define the maximum number of songs per genre
-max_songs_per_genre: 3
+max_songs_per_genre: 5
 
 # Define the template for generating the setlist
 setlist_template:
@@ -53,4 +53,3 @@ script:
 # Output the generated setlist
 output:
   text: "Here's your setlist:\n\n{{ setlist }}"
-
