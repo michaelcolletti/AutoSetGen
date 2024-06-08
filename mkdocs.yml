@@ -1,0 +1,28 @@
+site_name: AutoSetGen
+site_author: Michael Colletti 
+copyright: Creative Possibilities Inc. 2024
+remote_name: 
+site_description: For Creating Documentation using Github
+repo_url: https://github.com/michaelcolletti/AutoSetGen
+repo_name: AutoSetGen
+edit_uri: '?query=/docs'
+
+theme:
+    name: readthedocs
+    highlightjs: true
+    hljs_languages:
+        - yaml
+        - rust
+        - json
+        - python
+    locale: en
+#    custom_dir: custom
+    nav_style: dark
+#    color_scheme: 
+#    static_templates:
+#        - sitemap.html
+    include_sidebar: true
+nav:
+  - Home: README.md
+#  - Docs: docs.md
+#  - Project: project.md

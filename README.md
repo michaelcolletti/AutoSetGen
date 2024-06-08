@@ -26,7 +26,7 @@ gptscript ./announce.gpt
 
 - Now git clone this repo, cd into the project
 
-```sh
+```bash
 git clone https://github.com/michaelcolletti/AutoSetGen
 cd AutoSetGen
 ```
