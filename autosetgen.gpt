@@ -2,16 +2,17 @@ name: Generate Setlist
 
 # Define the different music genres
 genres:
-  - bebop
   - jazz fusion
-  - philly soul
+  - latin jazz
+  - free jazz
+
 
 # Define the API endpoint for getting average age by zip code
 #average_age_api_url: "https://api.example.com/average_age?zipcode={zipcode}"
 average_age_api_url: "https://api.census.gov/data/2020/dec/sf1/profile/P001?key={census_api_key}&zcta={zcta}"
 
 # Define the maximum number of songs per genre
-max_songs_per_genre: 5
+max_songs_per_genre: 3
 
 # Define the template for generating the setlist
 setlist_template:
@@ -20,18 +21,14 @@ setlist_template:
       - {song_title}
       - {song_title}
       - {song_title}
-   
 
 # Define the script logic
 script:
   # Get the user-provided zip code
   zipcode: "{{ user_input('Enter zip code:') }}"
-#  zipcode: "12498"
-
 
   # Get the average age for the zip code
   average_age: "{{ api_request(average_age_api_url, {'zipcode': zipcode})['average_age'] }}"
-#printf "{average_age}"
 
   # Calculate the target year based on the average age
   target_year: "{{ 2024 - average_age  }}"
@@ -51,4 +48,5 @@ script:
 
 # Output the generated setlist
 output:
-  text: "Here's your setlist:\n\n{{ setlist }}"
+  text: "Here's your setlist:\n\n{{ setlist }} \n"
+  text: "Avg age:\n {{ average_age }} \n Target year {{ target_year }} \n"

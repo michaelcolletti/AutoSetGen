@@ -31,7 +31,7 @@ git clone https://github.com/michaelcolletti/AutoSetGen
 cd AutoSetGen
 ```
 
-- Edit the [autosetgen](./autosetgen.gpt) file to change the values or leave my defaults of: jazz, bebop, jazz fusion, and philly soul. 3 Songs will be selected.
+- Edit the [autosetgen.gpt](./autosetgen.gpt) file to change the values or leave my defaults of: jazz, bebop, jazz fusion, and philly soul. 3 Songs will be selected.
 - Be sure to add your OpenAI API Key by either a env variable `export OPENAI_API_KEY=XXXXXXXXXXXXX` or set in your .env file. 
 - The same applies to the Census API key easily obtained [here](https://api.census.gov/data/key_signup.html).
 - **Be sure to not commit any keys in your repo. A great way to handle this is to use local .env files, Github secrets or a vault for secrets.**

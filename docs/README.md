@@ -1,5 +1,6 @@
 ## AutoSetGen 
 
+
 *This repo is the start of a series of projects designed specifically for musician worklflows and a subset of work using AI toolings to inject real-time data into everyday work and reduce toil for artists.*
 </p>
 
@@ -7,11 +8,14 @@
 
 ### Setup with GPTScript 
 
+![Made with GPTScript](https://github.com/gptscript-ai/gptscript/blob/main/examples/treasure-hunt/static/made-with-gptscript.png?raw=true)
+
+
 *GPTScript rocks! This is partially a fanboy post.* 
+
 - The GPTScript framework will be used to automate and make repeatable complex tasks.
 
-### AutoSetGen: Use GPTScript and Generate a multi genre Setlist based on Age, Zip Code 
-
+### AutoSetGen: Use GPTScript and Generate a multi-genre setlist based on age, zip code 
 
 - Install [gptscript](https://github.com/gptscript-ai/gptscript) now. Get started by visiting [GPTScript get started](https://github.com/gptscript-ai/gptscript?tab=readme-ov-file#getting-started).
 - Prereq: Git `brew install git` 
@@ -31,7 +35,7 @@ git clone https://github.com/michaelcolletti/AutoSetGen
 cd AutoSetGen
 ```
 
-- Edit the [autosetgen](./autosetgen.gpt) file to change the values or leave my defaults of: jazz, bebop, jazz fusion, and philly soul. 3 Songs will be selected.
+- Edit the [autosetgen.gpt](./autosetgen.gpt) file to change the values or leave my defaults of: jazz, bebop, jazz fusion, and philly soul. 3 Songs will be selected.
 - Be sure to add your OpenAI API Key by either a env variable `export OPENAI_API_KEY=XXXXXXXXXXXXX` or set in your .env file. 
 - The same applies to the Census API key easily obtained [here](https://api.census.gov/data/key_signup.html).
 - **Be sure to not commit any keys in your repo. A great way to handle this is to use local .env files, Github secrets or a vault for secrets.**
