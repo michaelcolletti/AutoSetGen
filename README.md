@@ -10,7 +10,7 @@
 *GPTScript rocks! This is partially a fanboy post.* 
 - The GPTScript framework will be used to automate and make repeatable complex tasks.
 
-### AutoSetGen: Use GPTScript and Generate a multi genre Setlist based on Age, Zip Code 
+### AutoSetGen: Use GPTScript and Generate a multi genre setlist based on Age, Zip Code 
 
 
 - Install [gptscript](https://github.com/gptscript-ai/gptscript) now. Get started by visiting [GPTScript get started](https://github.com/gptscript-ai/gptscript?tab=readme-ov-file#getting-started).
@@ -32,15 +32,15 @@ cd AutoSetGen
 ```
 
 - Edit the [autosetgen.gpt](./autosetgen.gpt) file to change the values or leave my defaults of: jazz, bebop, jazz fusion, and philly soul. 3 Songs will be selected.
-- Be sure to add your OpenAI API Key by either a env variable `export OPENAI_API_KEY=XXXXXXXXXXXXX` or set in your .env file. 
-- The same applies to the Census API key easily obtained [here](https://api.census.gov/data/key_signup.html).
+- Be sure to add your OpenAI API Key by either a env variable `export OPENAI_API_KEY=XXXXXXXXXXXXX` or set in your .env file. _Add .env to your .gitignore see details in this repo._)
+- The same applies to the Census API key set as _CENSUS_API_KEY_ in your .env (add .env and easily obtained [here](https://api.census.gov/data/key_signup.html).
 - **Be sure to not commit any keys in your repo. A great way to handle this is to use local .env files, Github secrets or a vault for secrets.**
 - After your environment and API keys are rockin, you're ready to start using your [autosetgen script](autosetgen.gpt)
 
 ### Running AutoSetGen 
 
 - At a Bash command in your project run: `gptscript autosetgen 12401` 
-- Using US Census data, this will fetch the average age `average_age` for men and women for Kingston, NY. This with the current year so (2024 - average_age + 17). *I added seventeen years so I could get the music listened at seventeen and all tha brings.* This is the `target_year`. 
+- Using US Census data, this will fetch the average age `average_age` for men and women for Kingston, NY. This with the current year so (2024 - average_age). This is the `target_year`. 
 - Will need to experiment with tweaking this number for prime nostalgia.
 - Then the top 40 for each genre will be provided with the number of selections provided in `max_songs_per_genre` 
 - See a Asciinema demo [here](https://asciinema.org/connect/dacc4acc-5c7d-4774-a644-4c8c868c0d72)
