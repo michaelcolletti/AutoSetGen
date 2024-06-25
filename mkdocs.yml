@@ -23,6 +23,6 @@ theme:
 #        - sitemap.html
     include_sidebar: true
 nav:
-  - Home: docs/README.md
+  - Home: README.md
 #  - Docs: docs.md
 #  - Project: project.md
